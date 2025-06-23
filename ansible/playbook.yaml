@@ -1,0 +1,10 @@
+---
+- name: Playbook
+  hosts: all
+  tasks:
+    - name: Setup ~/.ssh/authorized_key
+      ansible.posix.authorized_key:
+        user: root
+        exclusive: true
+        key: >
+          ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAfzNyNDsrkoHsnS4Cx8OnThuZHtnIXEzWi7UdJMauQ3 manage-gentoo
